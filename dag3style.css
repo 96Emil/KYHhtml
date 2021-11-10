@@ -1,0 +1,8 @@
+h1 {
+    font-size: 100px;
+    text-align: center;
+    border: blue solid 7px;
+    border-radius: 150px;
+    margin: 50px;
+    padding: 30px;
+}

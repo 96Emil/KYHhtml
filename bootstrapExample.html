@@ -1,0 +1,102 @@
+<!-- Bootstrap template by Marcus Henriksson -->
+<!-- To be used by students for educational purposes -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Import for BootStrap support -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Bootstrap Template</title>
+</head>
+<body>
+    <!-- Skapar en Jumbotron som agerar som header -->
+    <div class="jumbotron bg-primary text-center">
+        <h1>Min Bootstrap sida</h1>
+        <p>Välkommna till min sida!</p>
+    </div>
+
+    <!-- Skapar en container -->
+    <div class="container">
+        <!-- Skapar första row med 2 celler -->
+        <div class="row">
+            <div class="col-md-5 col-lg-6 col-xl-2" style="border: solid 1px;">
+                <p>Detta är en text inuti en column</p>
+            </div>
+            <div class="col-md-7 col-lg-6 col-xl-10" style="border: solid 1px;">
+                <p>Detta är text i en till column</p>
+            </div>
+        </div>
+
+        <!-- Skapar två nya row/rad med 2 columner -->
+        <div class="row">
+            <div class="col-md-8 order-2" style="border: solid 1px;">
+                <div class="row">
+                    <div class="col-lg-6" style="border: solid 1px;">
+                        <p>Detta är den första cellen i den indre raden</p>
+                    </div>
+                    <div class="col-lg-6" style="border: solid 1px;">
+                        <p>Detta är den andra cellen i den indre raden</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 order-1" style="border: solid 1px;">
+                <p>Cell nr 2 i den yttre raden</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center" style="border: solid 1px;">
+                <p>Dummy text</p>
+            </div>
+        </div>
+
+        <!-- Skapar en ny Row för en GroupList -->
+        <div class="row">
+            <div class="col-md-2 col-lg-4"></div>
+            <div class="col-md-8 col-lg-4">
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-primary">Mitt första objekt i listan</li>
+                    <li class="list-group-item list-group-item-warning">Mitt andra objekt i listan</li>
+                    <li class="list-group-item list-group-item-success">Objekt 3</li>
+                    <li class="list-group-item list-group-item-info">
+                        <img src="slideshowcat3.jpg" alt="Blomma" class="rounded-circle img-thumbnail">
+                    </li>
+                    <li class="list-group-item">
+                        <div class="btn btn-info" data-bs-toggle="modal" data-bs-target="#myModal">Klicka på mig för ett meddelade</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-lg-4"></div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Information till användare</h4>
+                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <p>Du ser nu på våran modal. Den har skärmat ner skärmen</p>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
