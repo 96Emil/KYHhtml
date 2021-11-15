@@ -1,0 +1,10 @@
+body {
+  background-color: black;
+}
+
+h1 {
+  color: #e20dd8;
+  text-shadow: #06ebf3 2px 2px 4px;
+  border: solid #e20dd8 40px;
+}
+/*# sourceMappingURL=myOwnSass.css.map */

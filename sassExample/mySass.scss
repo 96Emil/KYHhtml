@@ -1,0 +1,105 @@
+/* Dekleration av variabler */
+$my-color: rgb(0, 0, 0);
+$my-second-color: rgb(120, 252, 97);
+$primary-textsize: 30px;
+$my-border: solid;
+$round: true;
+$bigRound: true;
+
+// Dekleration av funktioner
+@mixin myTextShadow {
+    color: $my-second-color;
+    text-shadow: black 2px 2px 4px;
+}
+
+@mixin myDefaultBorder {
+    $borderColor: rgb(202, 166, 6);
+    border: solid 5px $borderColor;
+    margin: 50px;
+}
+
+@mixin myBorder {
+    border: solid 3px green;
+    text-shadow: rgb(15, 130, 0) 2px 2px 4px;
+}
+
+// Funktion för att skapa border, tar in färg, tjocklek och rundade hörn om det skall med
+@mixin createBorder($color, $width, $round, $bigRound) {
+    border: solid $color $width;
+     // If-sats för att se om vi ska ha med border-radius 
+     @if $round {
+        // border-radius: 50px;
+        // If-sats för stor eller liten radie
+        @if $bigRound {
+            border-radius: 100px;
+            padding: 30px;
+        } @else {
+            border-radius: 20px;
+        }
+ 
+     }
+}
+
+body {
+   // $my-color: rgb(235, 56, 44);
+    background-color: $my-color;
+}
+
+p {
+    @include myTextShadow();
+    @include createBorder($my-second-color, $primary-textsize, true, true);
+    font-size: $primary-textsize;
+    border: $my-border $primary-textsize;
+
+    // If-sats för att se om vi ska ha med border-radius 
+    @if $round {
+       // border-radius: 50px;
+       // If-sats för stor eller liten radie
+       @if $bigRound {
+           border-radius: 100px;
+        } @else {
+           border-radius: 20px;
+       }
+
+    }
+}
+
+h1 {
+    @include myTextShadow();
+    @include createBorder(rgb(5, 59, 5), 10px, true, true);
+    font-size: 100px;
+    text-align: center;
+}
+
+ul {
+    @include myDefaultBorder();
+    background-color: chartreuse;
+}
+
+ol {
+    @include myDefaultBorder();
+}
+
+ul {
+    li {
+        font-size: 45px;
+        background-color: brown;
+        margin: 10px;
+    }
+}
+
+li {
+    color: red;
+}
+
+.myClass {
+    p {
+        text-align: right;
+    }
+}
+
+.myDivClass {
+    @include myBorder();
+    font-size: 20px;
+}
+

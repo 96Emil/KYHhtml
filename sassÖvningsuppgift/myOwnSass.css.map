@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAsBA,AAAA,IAAI,CAAC;EACD,gBAAgB,EAtBT,KAAY;CAuBtB;;AAED,AAAA,EAAE,CAAC;EAjBC,KAAK,EAPS,OAAiB;EAQ/B,WAAW,EAAE,OAAgB,CAAC,GAAG,CAAC,GAAG,CAAC,GAAG;EASzC,MAAM,EAAE,KAAK,CAjBC,OAAiB,CAChB,IAAI;CA0BtB",
+    "sources": [
+        "myOwnSass.scss"
+    ],
+    "names": [],
+    "file": "myOwnSass.css"
+}

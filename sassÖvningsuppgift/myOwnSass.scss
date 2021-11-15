@@ -1,0 +1,30 @@
+// Deklaration av variabler
+$my_color: rgb(0, 0, 0);
+$my_second_color: rgb(226, 13, 216);
+$primary_textsize: 40px;
+$second_textsize: 20px;
+$my_border: solid 10px;
+$darkMode: true;
+
+@mixin myTextShadow {
+    color: $my_second_color;
+    text-shadow: rgb(6, 235, 243) 2px 2px 4px;
+}
+
+@mixin myBorder {
+    border: solid 3px green;
+    text-shadow: rgb(11, 235, 235) 2px 2px 4px;
+}
+
+@mixin createBorder($color, $width,) {
+    border: solid $color $width;
+}
+
+body {
+    background-color: $my_color;
+}
+
+h1 {
+    @include myTextShadow();
+    @include createBorder($my_second_color, $primary_textsize);
+}
